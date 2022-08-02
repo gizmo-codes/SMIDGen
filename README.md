@@ -7,9 +7,6 @@ learning to recommend new keywords based on the tweets selected as relavant. Pro
 
 [Sensify Lab](http://sensifylab.org/)
 
-# Self-Hosted Demo
-[Live Demo](https://smidgen.omzig.dev)
-- Note: Firebase functionality is removed from demo.
 
 # Contributors
 
@@ -26,7 +23,38 @@ I was responsible for:
 * The frontend search page (/html/search.html)
 * Saving and loading tweet data from Firebase (/js/search.js)
 
-Essentailly everything in the [demo](https://smidgen.omzig.dev) as well as firebase interactions that are disabled.
+Essentailly everything in the [demo](https://smidgen.omzig.dev) below, as well as firebase interactions <b>[disabled in the demo]</b>.
+
+# Self-Hosted Demo
+[Live Demo](https://smidgen.omzig.dev)
+- Note: Firebase functionality is removed from demo.
+
+## Usage
+### Sinlge Query
+`cat` or `cat meow` etc
+
+* `cat` performs a single query for any tweets containing the word "cat"
+* `cat meow` performs a single query for any tweets containing "cat" AND "meow"
+
+### Multi-Query: Comma seperated
+
+`dog,cat,bacon` or `dog, cat, bacon` etc.
+
+This will perform <b>3 separate queries</b> and combine the results
+
+### Multi-Query: Comma separated, with spaces
+
+`walking dog, cat`
+
+This will perform <b>2 separate queries</b>:
+1. One where "walking" <b>AND</b> "dog" appear in the same tweet.
+2. Another separate query with any tweets containing "cat"
+
+Results are then combined
+
+You can also click the "+" icon to add extra search rows -- this is equivalet to comma separating.
+
+Any combination of the above can be used.
 
 # Dependencies
 ## [Python](https://www.python.org/) with [pip enabled](https://pip.pypa.io/en/stable/installation/)
