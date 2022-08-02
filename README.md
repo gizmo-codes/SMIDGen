@@ -7,6 +7,10 @@ learning to recommend new keywords based on the tweets selected as relavant. Pro
 
 [Sensify Lab](http://sensifylab.org/)
 
+# Self-Hosted Demo
+[Live Demo](https://smidgen.omzig.dev)
+- Note: Firebase functionality is removed from demo.
+
 # Contributors
 
 * [Paul Townshend](https://github.com/paultownshend)
@@ -16,6 +20,13 @@ learning to recommend new keywords based on the tweets selected as relavant. Pro
 * [Xinyi Sun](https://github.com/sunxinyi0501)
 * [Minghao Zhao](https://github.com/0Aris0)
 * Matthew Chandler (me)
+
+I was responsible for:
+* Querying the Twitter API (/python/twapi.py)
+* The frontend search page (/html/search.html)
+* Saving and loading tweet data from Firebase (/js/search.js)
+
+Essentailly everything in the [demo](https://smidgen.omzig.dev) as well as firebase interactions that are disabled.
 
 # Dependencies
 ## [Python](https://www.python.org/) with [pip enabled](https://pip.pypa.io/en/stable/installation/)
