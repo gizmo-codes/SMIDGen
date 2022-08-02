@@ -1,0 +1,81 @@
+body {
+  background: #eee
+}
+
+.icons i {
+  color: #b5b3b3;
+  border: 1px solid #b5b3b3;
+  padding: 6px;
+  margin-left: 4px;
+  border-radius: 5px;
+  cursor: pointer
+}
+
+.activity-done {
+  font-weight: 600
+}
+
+.list-group li {
+  margin-bottom: 12px
+}
+
+
+
+.list li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #e3dada;
+  margin-top: 12px;
+  border-radius: 5px;
+  background: #fff
+}
+
+.checkicon {
+  color: green;
+  font-size: 19px
+}
+
+.date-time {
+  font-size: 12px
+}
+
+.profile-image img {
+  margin-left: 3px
+}
+
+.nav {
+  background-color: rgb(34, 34, 34);
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: transparent;
+}
+
+.nav a:hover {
+  cursor: pointer;
+  background-color: darkslategrey;
+}
+
+
+.header-footer {
+  text-align: left;
+  justify-content: left;
+  background-color: rgb(34, 34, 34);
+  height: 45px;
+  border-radius: 4px;
+}
+
+
+#spinner {
+  position: fixed;
+  z-index: 1031;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

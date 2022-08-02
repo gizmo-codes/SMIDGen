@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ribo Yuan">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Search Tweets · SMIDGen</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>  
+    <!-- Custom styles for this template -->
+    <link href="../css/newSearch.css" rel="stylesheet">
+  </head>
+
+  <body class="text-left">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="ibox-content float-e-margins">
+          
+ 
+                <div class="input-group" id = "queryParam">
+                    <div class="ml-1 dropdown">
+                        <button class="btn btn-lg btn-light dropdown-toggle" type="button" id="numberOfTweets" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            50
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" id = "oneHundred" href="#">100</a>
+                            <a class="dropdown-item" id = "oneFifty" href="#">150</a>
+                        </div>
+                    </div>
+
+                    <input type="text" placeholder="Type in keywords, seperate by space" class="form-control input-lg ml-1" id = "keywords">
+                    <div class="ml-1 nput-group-btn">
+                        <button class="btn btn-lg btn-light" type="submit" id="search">
+                            Search
+                        </button>
+                    </div>
+                    <div class="ml-1 dropdown">
+                        <button class="btn btn-lg btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Save</a>
+                            <a class="dropdown-item" href="#">Label</a>
+                        </div>
+                    </div>
+
+                    <!--Prevent "confirm form resubmission" pop-up-->
+                    <script>
+                        if ( window.history.replaceState ) {
+                            window.history.replaceState( null, null, window.location.href );
+                        }
+                    </script>
+
+                </div>
+
+                      
+                <div style="overflow-y: scroll; height:600px;" id = "tweets">
+                      <div class="hr-line-dashed"></div>
+                      <div class="search-result">
+                          <a href="#" class="search-link">external redirection to Twitter</a>
+                          <p>
+                            Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+                          </p>
+                      </div>
+  
+                      <div class="hr-line-dashed"></div>
+                      <div class="search-result">
+                        <a href="#" class="search-link">external redirection to Twitter</a>
+                          <p>
+                            Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+                          </p>
+                      </div>
+
+                      <div class="hr-line-dashed"></div>
+                      <div class="search-result">
+                          <a href="#" class="search-link">www.twitter.com</a>
+                          <p>
+                            Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+                          </p>
+                      </div>
+
+                      <div class="hr-line-dashed"></div>
+                      <div class="search-result">
+                          <a href="#" class="search-link">www.twitter.com</a>
+                          <p>
+                            Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+                          </p>
+                      </div>
+
+                      <div class="hr-line-dashed"></div>
+                      <div class="search-result">
+                        <a href="#" class="search-link">www.twitter.com</a>
+                        <p>
+                          Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets".
+                        </p>
+                      </div>
+
+                </div>
+
+              </div>
+          </div>
+      </div>
+    </div>
+                      
+    
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="../js/newSearch.js"></script>
+  </body>
+  
+</html>

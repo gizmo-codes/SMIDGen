@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMIDGen</title>
+
+  <!--Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+
+  <!-- JQuery/Bootstrap JS-->
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+
+  <!-- CSS Imports + Fonts -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+  <!-- Temp Favicon Error Fix-->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+
+</head>
+
+<body>
+   <!-- Nav Banner -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SMIDGen</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/">
+        <!-- class="btn btn-outline-success my-2 my-sm-0" -->
+        <h3 class="navbar-brand" id="u-name-display"></h3>
+        <a class="btn btn-outline-danger my-2 my-sm-0" id="logout-nav" href="#">Log Out</a>
+      </form>
+    </div>
+  </nav>
+
+    <h3>Query</h3>
+    <form class="tweet_in" id="tweet_in">
+        <div id="multi_query" class="multi_query">
+            <input type="text" id="tweet" name="tweet" value="cat" /><br>
+        </div>
+        <button type="button" class="add_tweet_query_button" id="add_tweet_query_button" name="add_tweet_query"
+            onclick="extra_query()">+</button>
+        <input class="query_button" type="button" value="Search" onclick='checkTweet()'>
+    </form>
+    <div id="error_test"></div>
+
+    <!--
+
+  <h3>Single Query</h3>
+  <form class="tweet_single" id="tweet_single">
+    <label for="tweet">Tweet:</label>
+    <input type="text" id="tweet" name="tweet" value="cat" placeholder="tweet">
+    <input class="button2" type="button" value="CHECK" onclick='checkTweet()'>
+  </form>
+  </div>
+-->
+    <br>
+    <div class="flex-container">
+        <h3 class="flex-child magenta" id="resultTitle" ><u>Results</u></h3>
+        <h3 class="flex-child-red" id="resultTitle" ><u>Preivous Queries</u></h3>
+        <h3 class="flex-child green" id="savedDataTitle"><u>Saved Data</u></h3>
+    </div>
+    <div class="flex-container">
+        <div class="flex-child magenta" id="result">
+        </div>
+        <div class="flex-child-red" id="prev_queries"></div>
+        <div class="flex-child green" id="saved_data">
+        </div>
+
+    </div>
+    <div class="flex-container">
+        <button class="flex-child magenta" id="save_results_btn" style="visibility: hidden;">REMOVED FOR DEMO</button>
+        <button class="flex-child-red" id="clear_storage_btn" onclick="clearLocal()">Clear Storage</button>
+        <button class="flex-child green" id="load_data_btn" >REMOVED FOR DEMO</button>
+    </div>
+
+    <!-- Firebase Configuration -->
+    <script>
+        var firebaseConfig = {
+            // Removed
+        };
+
+        // Initialize database.
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        // const analytics = getAnalytics(app);
+    </script>
+
+    <!-- Twitter Embed -->
+    <!--  <script src="https://platform.twitter.com/widgets.js"></script> -->
+
+    <!-- Flask local scripts syntax
+
+  <script src="{{url_for('static', filename='load.js')}}"></script>
+  <script src="{{url_for('static', filename='app.js')}}"></script>
+  <script src="{{url_for('static', filename='embed.js')}}"></script>
+  <script src="{{url_for('static', filename='auth.js')}}"></script>
+  -->
+
+  <!-- Local Scripts || Formatted for node.js -->
+  <script src="/js/search.js"></script>
+
+</body>
+
+</html>

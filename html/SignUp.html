@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Firebase
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js"></script>
+  
+  <script src="./node_modules/firebase/firebase-app.js"></script>
+  <script src="./node_modules/firebase/firebase-auth.js"></script>
+  <script src="./node_modules/firebase/firebase-firestore.js"></script>
+  
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js'
+    import { auth } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js'
+    import { firestore } from 'https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js'
+  </script>
+  -->
+  <!-- Temp Favicon Error Fix-->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Sign up · SMIDGen</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+  
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+
+  <link href="../css/SignUp.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+  <main class="form-signin">
+    <h1 class="mb-4">SMIDGen</h1>
+    <form>
+
+      <!-- input for first and last name -->
+      <!-- <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+    </div> -->
+
+      <!-- input for email address -->
+      <div class="form-group mt-3">
+        <input name="email" type="email" class="form-control" id="uemail" placeholder="Email address"
+          required="required">
+        <p id='email validation'></p>
+      </div>
+
+      <!-- input for password -->
+      <div class="form-group mt-3">
+        <input name="password" type="password" class="form-control" id="upassword" placeholder="Password"
+          required="required">
+      </div>
+
+      <!-- input for confirming password -->
+      <div class="form-group mt-3">
+        <input name="confirmpassword" type="password" class="form-control" id="cpassword"
+          placeholder="Confirm password" required="required">
+        <span id='message'></span>
+      </div>
+
+      <p style="display:inline-block">Already have an account? </p>
+      <a href="./Login.html">Log in</a>
+
+      <!--Sign up button-->
+
+      <button class="w-100 btn btn-lg btn-outline-secondary mt-3" id="signup_button" type="button">Sign up</button>
+    </form>
+
+  </main>
+  <script src="../js/signup.js" type="module"></script>
+  
+
+</body>
+
+</html>

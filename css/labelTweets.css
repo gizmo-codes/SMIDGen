@@ -1,0 +1,19 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+#spinner{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background-image: url('../images/spinner.gif');
+    background-size: 100%;
+}
